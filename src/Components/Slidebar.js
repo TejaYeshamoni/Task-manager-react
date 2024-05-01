@@ -1,14 +1,11 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Switch } from "@headlessui/react";
-// import boardIcon from "../assets/icon-board.svg";
+
+
+
 import useDarkMode from "../Hooks/useDarkMode";
 
-// import darkIcon from "../assets/icon-dark-theme.svg";
-// import lightIcon from "../assets/icon-light-theme.svg";
-
-// import showSidebarIcon from "../assets/icon-show-sidebar.svg";
-// import hideSidebarIcon from "../assets/icon-hide-sidebar.svg";
 
 import boardsSlice from "../Redux/boardsSlice";
 import AddEditBoardModal from "../Models/AddEditBoardModal";
@@ -63,7 +60,7 @@ function Sidebar({ isSideBarOpen, setIsSideBarOpen }) {
                         dispatch(boardsSlice.actions.setBoardActive({ index }));
                       }}
                     >
-                      <img src={boardIcon} className="  filter-white  h-4 " />{" "}
+                      <img src= "https://res.cloudinary.com/doccuqzqe/image/upload/v1714547703/board_mavuxr.jpg" className="  filter-white  h-4 " />{" "}
                       <p className=" text-lg font-bold ">{board.name}</p>
                     </div>
                   ))}
@@ -74,13 +71,13 @@ function Sidebar({ isSideBarOpen, setIsSideBarOpen }) {
                       setIsBoardModalOpen(true);
                     }}
                   >
-                    <img src={boardIcon} className="   filter-white  h-4 " />
+                    <img src= "https://res.cloudinary.com/doccuqzqe/image/upload/v1714547703/board_mavuxr.jpg" className="   filter-white  h-4 " />
                     <p className=" text-lg font-bold  ">Create New Board </p>
                   </div>
                 </div>
 
                 <div className=" mx-2  p-4 relative space-x-2 bg-slate-100 dark:bg-[#20212c] flex justify-center items-center rounded-lg">
-                  <img src={lightIcon} alt="sun indicating light mode" />
+                  <img src= "https://res.cloudinary.com/doccuqzqe/image/upload/v1714548232/light_kxe9b7.jpg" alt="sun indicating light mode" />
 
                   <Switch
                     checked={darkSide}
@@ -96,7 +93,7 @@ function Sidebar({ isSideBarOpen, setIsSideBarOpen }) {
                     />
                   </Switch>
 
-                  <img src={darkIcon} alt="moon indicating dark mode" />
+                  <img src= "https://res.cloudinary.com/doccuqzqe/image/upload/v1714548232/dark_odlgpz.webp" alt="moon indicating dark mode" />
                 </div>
               </div>
             </div>
@@ -110,14 +107,14 @@ function Sidebar({ isSideBarOpen, setIsSideBarOpen }) {
             >
               <img
                 className=" min-w-[20px]"
-                src={hideSidebarIcon}
+                src= "https://res.cloudinary.com/doccuqzqe/image/upload/v1714548231/hide_mcdadm.png"
                 alt=" side bar show/hide"
               />
               {isSideBarOpen && <p> Hide Sidebar </p>}
             </div>
           ) : (
             <div className=" absolute p-5  " onClick={() => toggleSidebar()}>
-              <img src={showSidebarIcon} alt="showSidebarIcon" />
+              <img src= "https://res.cloudinary.com/doccuqzqe/image/upload/v1714548232/show_x10ela.png" alt="showSidebarIcon" />
             </div>
           )}
         </div>
