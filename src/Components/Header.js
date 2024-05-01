@@ -1,9 +1,5 @@
 import React, { useState } from "react";
 
-// import Logo from "../assets/logo-mobile.svg";
-// import iconDown from "../assets/icon-chevron-down.svg";
-// import iconUp from "../assets/icon-chevron-up.svg";
-// import elipsis from "../assets/icon-vertical-ellipsis.svg";
 
 import HeaderDropDown from "./HeaderDropDown";
 import ElipsisMenu from "./Menu";
@@ -56,7 +52,7 @@ function Header({ setIsBoardModalOpen, isBoardModalOpen }) {
       <header className=" flex justify-between dark:text-white items-center  ">
         {/* Left Side  */}
         <div className=" flex items-center space-x-2  md:space-x-4">
-          <img src={Logo} alt=" Logo " className=" h-6 w-6" />
+          <img src= "https://res.cloudinary.com/doccuqzqe/image/upload/v1714543876/Screenshot_2024-05-01_113707_jcyrnt.png" alt=" Logo " className=" h-6 w-6" />
           <h3 className=" md:text-4xl  hidden md:inline-block font-bold  font-sans">
             Tasks
           </h3>
@@ -65,7 +61,7 @@ function Header({ setIsBoardModalOpen, isBoardModalOpen }) {
               {board.name}
             </h3>
             <img
-              src={openDropdown ? iconUp : iconDown}
+              src={openDropdown ? "https://res.cloudinary.com/doccuqzqe/image/upload/v1714544270/up_kkh7on.png" : "https://res.cloudinary.com/doccuqzqe/image/upload/v1714544271/down_lk1g3j.png"}
               alt=" dropdown icon"
               className=" w-3 ml-2 md:hidden"
               onClick={onDropdownClick}
@@ -99,7 +95,7 @@ function Header({ setIsBoardModalOpen, isBoardModalOpen }) {
               setOpenDropdown(false)
               setIsElipsisMenuOpen((prevState) => !prevState);
             }}
-            src={elipsis}
+            src= "https://res.cloudinary.com/doccuqzqe/image/upload/v1714544483/dots_qjqtw0.png"
             alt="elipsis"
             className=" cursor-pointer h-6"
           />
